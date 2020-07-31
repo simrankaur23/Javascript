@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+    <script src="todo.js" defer></script>
+    <title>Task App</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Header starts -->
+        <div id="header">
+            To-do List
+        </div>
+        <!-- Header ends -->
+
+        <!-- Main starts -->
+        <main id="app">
+            <section id="board">
+                <div id="add-task-form">
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                        Add Task
+                    </button>
+
+                </div>
+            </section>
+            <section id="columns">
+                <div class="column dropzone">
+                    <h3 class="column-title">To-do List</h3>
+                    <hr>
+                    <ul class="tasks" id="tasks-added">
+
+                    </ul>
+                </div>
+                <div class="column dropzone">
+                    <h3 class="column-title">Running Task</h3>
+                    <hr>
+                </div>
+                <div class="column dropzone">
+                    <h3 class="column-title">Completed Task</h3>
+                    <hr>
+                </div>
+            </section>
+        </main>
+        <!-- Main ends -->
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add Task</h4>
+                </div>
+                <div class="modal-body">
+                    <textarea id="task-value"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button"  id="add-task" class="btn btn-default" data-dismiss="modal">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
